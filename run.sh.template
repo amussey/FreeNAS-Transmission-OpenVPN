@@ -1,0 +1,18 @@
+#!/usr/local/bin/expect -f
+
+spawn openvpn \
+    --cd /FreeNAS-Transmission-OpenVPN/openvpn \
+    --config /FreeNAS-Transmission-OpenVPN/openvpn/openvpn.conf \
+    --up /FreeNAS-Transmission-OpenVPN/scripts/start_transmission.sh \
+    --script-security 2 \
+    --down /FreeNAS-Transmission-OpenVPN/scripts/stop_transmission.sh \
+    --daemon openvpn \
+    --log-append /FreeNAS-Transmission-OpenVPN/openvpn-running.log \
+    --writepid /FreeNAS-Transmission-OpenVPN/openvpn.pid
+
+expect "Enter Auth Username:" {
+    send "USERNAME\n"
+}
+expect "Enter Auth Password:" {
+    send "PASSWORD\n"
+}
