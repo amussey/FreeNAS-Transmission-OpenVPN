@@ -1,8 +1,8 @@
-# FreeNAS Transmission <-> OpenVPN
+# FreeNAS Transmission ⇔ OpenVPN
 
-This guide and the associated scripts are compiled to help you secure your Transmission client so it only sends traffic through a VPN.  For this particular guide, I'll be showing you how to set up [Private Internet Access](https://www.privateinternetaccess.com) on [FreeNAS 9.3](http://www.freenas.org), but any VPN service should work about the same, and the guide should be generic enough to apply to any FreeBSD jail.
+This guide and the associated scripts will help you secure your Transmission client so it only sends traffic through a VPN.  For this particular guide, I'll be showing you how to set up [Private Internet Access](https://www.privateinternetaccess.com) on a [FreeNAS 9.3](http://www.freenas.org) jail, but any VPN service should work about the same, and the guide should be generic enough to apply to any FreeBSD jail.
 
-# Setup
+## Setup
 
 From the FreeNAS web interface, install the Trasmission plugin.
 
