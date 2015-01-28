@@ -26,7 +26,7 @@ root@transmission_3:/ #
 Now you're inside your jail, running the `tcsh` shell.  `cd` to the root of the drive, and clone this repo.  `git` doesn't come pre-installed, but `svn` does, so you can run the following command to checkout the repo using svn:
 
 ```bash
-svn checkout https://github.com/amussey/FreeNAS-Transmission-OpenVPN
+svn checkout https://github.com/amussey/FreeNAS-Transmission-OpenVPN/trunk /FreeNAS-Transmission-OpenVPN
 ```
 
 If you want to install git, you can run the following command:
