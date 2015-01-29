@@ -12,9 +12,11 @@ install: fix_permissions
 	@echo "In the FreeNAS web interface, please enable and then disable the Transmission plugin (from the Plugins > Installed page)."
 	@echo "Press [ENTER] once the plugin is disabled." ; \
 		read userdone
-	if [ "`cat /etc/rc.conf | grep "transmissionvpn_enable" | wc -l`" -ne "1" ] ; then echo "transmissionvpn_enable=\"YES\"" >> /etc/rc.conf ; fi
-	cat /etc/rc.conf | grep -v "transmission_enable" > /etc/rc.conf
-	echo "transmissionvpn_enable=\"YES\"" >> /etc/rc.conf
+	if [ "`cat /etc/rc.conf | grep "transmissionvpn_enable" | wc -l`" -lt "1" ] ; then echo "transmissionvpn_enable=\"YES\"" >> /etc/rc.conf ; fi
+	cat /etc/rc.conf | grep -v "transmission_enable" > rc.conf.tmp
+	cat rc.conf.tmp > /etc/rc.conf
+	rm rc.conf.tmp
+	echo "transmission_enable=\"YES\"" >> /etc/rc.conf
 	/usr/local/etc/rc.d/transmission start
 	/usr/local/etc/rc.d/transmission stop
 	@clear
