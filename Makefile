@@ -18,6 +18,7 @@ install: fix_permissions
 	rm rc.conf.tmp
 	echo "transmission_enable=\"YES\"" >> /etc/rc.conf
 	/usr/local/etc/rc.d/transmission start
+	sleep 3  # Sometimes, the following stop happens before the process can completely start.
 	/usr/local/etc/rc.d/transmission stop
 	@clear
 	@echo "Enter your OpenVPN username and press [ENTER]:" ; \
