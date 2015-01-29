@@ -1,6 +1,6 @@
 #!/usr/local/bin/expect -f
 
-spawn openvpn \
+spawn /usr/local/sbin/openvpn \
     --cd /FreeNAS-Transmission-OpenVPN/openvpn \
     --config /FreeNAS-Transmission-OpenVPN/openvpn/openvpn.conf \
     --up /FreeNAS-Transmission-OpenVPN/scripts/start_transmission.sh \
