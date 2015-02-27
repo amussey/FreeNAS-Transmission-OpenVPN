@@ -44,10 +44,7 @@ root@transmission_3:/FreeNAS-Transmission-OpenVPN # make
 
 The setup script will walk you through a coupe additional steps.
 
-When you've finished these steps, you'll need to copy your `openvpn.conf` and the associated keys into /FreeNAS-Transmission-OpenVPN/openvpn.  For 
-
-
-Now, download your OpenVPN certificates.  For Private Internet Access, these are available using the following command:
+When you've finished these steps, you'll need to copy your `openvpn.conf` and the associated keys into `/FreeNAS-Transmission-OpenVPN/openvpn`.  For Private Internet Access, these are available using the following command:
 
 ```bash
 wget https://www.privateinternetaccess.com/openvpn/openvpn.zip --no-check-certificate
