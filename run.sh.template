@@ -8,7 +8,8 @@ spawn /usr/local/sbin/openvpn \
     --down /FreeNAS-Transmission-OpenVPN/scripts/stop_transmission.sh \
     --daemon openvpn \
     --log-append /FreeNAS-Transmission-OpenVPN/openvpn-running.log \
-    --writepid /FreeNAS-Transmission-OpenVPN/openvpn.pid
+    --writepid /FreeNAS-Transmission-OpenVPN/openvpn.pid \
+    --auth-user-pass 
 
 expect "Enter Auth Username:" 
 send "USERNAME\n"
