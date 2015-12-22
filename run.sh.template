@@ -10,9 +10,7 @@ spawn /usr/local/sbin/openvpn \
     --log-append /FreeNAS-Transmission-OpenVPN/openvpn-running.log \
     --writepid /FreeNAS-Transmission-OpenVPN/openvpn.pid
 
-expect "Enter Auth Username:" {
-    send "USERNAME\n"
-}
-expect "Enter Auth Password:" {
-    send "PASSWORD\n"
-}
+expect "Enter Auth Username:" 
+send "USERNAME\n"
+expect "Enter Auth Password:"
+send "PASSWORD\n"
