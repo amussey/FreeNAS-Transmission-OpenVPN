@@ -66,3 +66,19 @@ To stop the OpenVPN process, you can run the opposite command:
 ```
 
 That's all there is to it!  Enjoy your privacy!
+
+
+## FAQ
+
+ * **How do I test to make sure this is working?**
+
+[TorGuard provides a .torrent file that will tell you what IP address your application is connecting from.](https://torguard.net/checkmytorrentipaddress.php)  Give it a try, and compare it against your [public IP address](https://www.google.com/search?q=my+ip+address#).
+
+ * **Will OpenVPN and Transmission automatically start when I boot FreeNAS?**
+
+They should!  If you find that your instances do not, please create an issue.
+
+ * **What happens if I lose my VPN connection?  Is there any sort of kill switch?**
+
+There is!  It's a little bit primative, but [OpenVPN is launched](https://github.com/amussey/FreeNAS-Transmission-OpenVPN/blob/master/run.sh.template) with the `--down` flag pointing to a script to kill Transmission.  If the VPN connection is lost, OpenVPN should kill the Transmission process.
+
